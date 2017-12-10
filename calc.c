@@ -26,6 +26,7 @@
              case '+' : push(pop() + pop()); break;
              case '-' : push(-pop() + pop()); break;
              case '*' : push(pop() * pop()); break;
+             case '/' : push(pop() / pop()); break;
              default:
                  ungetc(c, stdin);
                  if (scanf("%d", &x) != 1) { /*cheching if value is usable in calculations(is in integer type)*/
