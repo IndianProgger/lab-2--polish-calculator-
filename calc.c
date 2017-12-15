@@ -19,14 +19,15 @@
      while (!feof(stdin)) {
          int c = getchar(); /*reading values from string*/
          int x;
+         int t;
          switch (c) {
              case '\n':
              case ' ' : break;
              case '=' : printf("Result = %d\n", pop()); break; /*writing result of calculation*/
              case '+' : push(pop() + pop()); break;
-             case '-' : push(-pop() + pop()); break;
+             case '-' : t=pop(); push(pop()-t); t=0; break;
              case '*' : push(pop() * pop()); break;
-             case '/' : push(pop() / pop()); break;
+             case '/' : t=pop(); push(pop()/ t); t=0; break;
              default:
                  ungetc(c, stdin);
                  if (scanf("%d", &x) != 1) { /*cheching if value is usable in calculations(is in integer type)*/
