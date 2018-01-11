@@ -15,7 +15,7 @@ void push(int a) { /*initialising stack function push*/
 };
 
 int main() { /*initialising main function*/
-printf("To end work of this calculator enter '@'.\n");
+printf("To end work of this calculator enter 'q'.\n");
     while (!feof(stdin)) {
         int c = getchar(); /*reading values from string*/
      	int t,t2,t3;
