@@ -14,13 +14,15 @@ void push(int a) { /*initialising stack function push*/
     stack[sp++] = a;
 };
 
- 
 int main() { /*initialising main function*/
+printf("To end work of this calculator enter '@'.\n");
     while (!feof(stdin)) {
         int c = getchar(); /*reading values from string*/
      	int t,t2;
         int x;
         switch (c) {
+        	case '@': 
+			return 0; 
             case '\n':
             case ' ' : break;
             case '=' : printf("Result = %d\n", pop()); break; /*writing result of calculation*/
